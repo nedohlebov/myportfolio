@@ -1,0 +1,655 @@
+@import url('reset.css');
+/*------------fonts---------------*/
+@font-face {
+  font-family: 'proxima_nova_ththin';
+  src: url('../fonts/proxima_nova_thin-webfont.eot');
+  src: url('../fonts/proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_thin-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_thin-webfont.woff') format('woff'), url('../fonts/proxima_nova_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('../fonts/proxima_nova_regular-webfont.eot');
+  src: url('../fonts/proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_regular-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_regular-webfont.woff') format('woff'), url('../fonts/proxima_nova_regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url('../fonts/proxima_nova_bold-webfont.eot');
+  src: url('../fonts/proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_bold-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_bold-webfont.woff') format('woff'), url('../fonts/proxima_nova_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_novaregular_italic';
+  src: url('../fonts/proxima_nova_regular_italic-webfont.eot');
+  src: url('../fonts/proxima_nova_regular_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_regular_italic-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_regular_italic-webfont.woff') format('woff'), url('../fonts/proxima_nova_regular_italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------less-------------*/
+/*------------media-------------*/
+.container {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font: normal 14px 'proxima_nova_rgregular', Tahoma, Arial, sans-serif;
+}
+/*-------------general---------------*/
+.hidden {
+  display: none;
+}
+.scrollup {
+  display: none;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  behavior: url('../js/PIE.htc');
+  position: relative;
+  zoom: 1;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 9999;
+}
+.scrollup span {
+  width: 100px;
+  height: 100px;
+}
+.scrollup:hover {
+  background-color: #333333;
+}
+/*-------------main css----------------*/
+/*-------------top-line----------------*/
+#top-line {
+  padding: 5px 0;
+  background: url('../images/bg_transparent.png') top left repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+#top-line .container {
+  position: relative;
+}
+#top-line:after,
+#about:after {
+  display: block;
+  content: '';
+  height: 0;
+  clear: both;
+}
+.navbar-button {
+  display: none;
+}
+nav {
+  float: left;
+  text-align: center;
+  width: 60%;
+  padding: 0 5%;
+  display: table;
+}
+nav ul {
+  text-align: center;
+  margin: 0 auto;
+  display: table-row;
+}
+nav li {
+  display: table-cell;
+}
+nav a,
+nav a:link,
+nav a:active {
+  padding: 25px 5px;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  background: none;
+}
+nav a:active,
+nav a:visited {
+  outline: none;
+}
+nav a.active {
+  color: #e7292c;
+  outline: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.tel {
+  color: #ffffff;
+  margin-left: 70%;
+  text-align: center;
+  padding: 10px 0;
+}
+.tel p,
+.tel span {
+  font-family: 'proxima_novaregular_italic';
+  font-size: 18px;
+}
+.tel span {
+  color: #e7292c;
+}
+.social {
+  margin-left: 70%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.social a {
+  color: #000000;
+  background-color: #ccc;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  behavior: url('../js/PIE.htc');
+  position: relative;
+  zoom: 1;
+  padding: 3px;
+  cursor: pointer;
+  width: 20px;
+  display: inline-block;
+  transition: background-color 0.5s;
+}
+.social a:hover {
+  background-color: #ffffff;
+}
+/*---------------slogan-----------------*/
+#slogan {
+  width: 100%;
+  height: 760px;
+  background: url('../images/slogan_bg.jpg') center center no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+}
+h1,
+h2 {
+  font-size: 300%;
+  text-align: center;
+}
+#slogan h1,
+#slogan h2 {
+  color: #ffffff;
+}
+#slogan h1 {
+  font-family: 'proxima_nova_ththin';
+}
+/*---------------about-----------------*/
+#about {
+  padding: 30px 0;
+}
+#about h1,
+#knowledges h1,
+#expirience h1 {
+  color: #000000;
+}
+.photo {
+  width: 29%;
+  padding: 3% 5%;
+  float: left;
+}
+.photo img {
+  border-radius: 20%;
+  -moz-border-radius: 20%;
+  -o-border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -ms-border-radius: 20%;
+  behavior: url('../js/PIE.htc');
+  position: relative;
+  zoom: 1;
+  border: none;
+  outline: none;
+  width: 100% !important;
+}
+.about {
+  padding: 3% 5%;
+  margin-left: 50%;
+}
+.about h2,
+#portfolio h2 {
+  color: #000000;
+  text-align: center;
+  font-size: 200%;
+  margin: 10px 0;
+}
+.about h2:first-child {
+  margin-top: 0;
+}
+.about p,
+.skills li,
+.general-knowledges p,
+.work-place-description p,
+#portfolio p {
+  font-size: 120%;
+  margin-bottom: 5px;
+}
+.about span {
+  font-size: 120%;
+  color: #e7292c;
+}
+/*-------------knowledges------------*/
+#knowledges {
+  background-color: #e7292c;
+  padding: 20px 0;
+  overflow: hidden;
+}
+#knowledges h1,
+#expirience h1,
+#portfolio h1 {
+  margin-bottom: 20px;
+}
+.skills {
+  margin-left: 50px;
+  width: 200px;
+  float: left;
+}
+.skills h1 {
+  color: #ffffff;
+}
+.skills li {
+  color: #ffffff;
+}
+.general-knowledges {
+  margin-left: 280px;
+}
+.general-knowledges ins,
+.general-knowledges a {
+  font-size: 100%;
+}
+.general-knowledges a {
+  color: #111;
+}
+/*--------------expirience-------------*/
+#expirience {
+  background-color: #ffffff;
+  padding: 20px 20px 40px;
+}
+.work-places {
+  border: 1px solid #e7292c;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  behavior: url('../js/PIE.htc');
+  position: relative;
+  zoom: 1;
+  padding: 0 20px;
+}
+.years p {
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'proxima_nova_rgbold';
+  color: #e7292c;
+  border-top: 1px dotted #aaa;
+  cursor: pointer;
+}
+.work-place:first-child .years p {
+  border-top: none;
+}
+.work-place-description {
+  display: none;
+}
+.work-place-description p {
+  margin-top: 10px;
+}
+.work-name:before,
+.work-position:before,
+.work-responsibility:before,
+.work-subordinates:before,
+.work-reason:before {
+  font-family: 'proxima_nova_rgbold';
+}
+.work-name:before {
+  content: 'Место работы: ';
+}
+.work-position:before {
+  content: 'Должность: ';
+}
+.work-responsibility:before {
+  content: 'Обязанности: ';
+}
+.work-subordinates:before {
+  content: 'К-во подчинённых: ';
+}
+.work-reason:before {
+  content: 'Причина увольнения: ';
+}
+p.work-reason {
+  margin-bottom: 20px !important;
+}
+/*----------------portfolio------------*/
+#portfolio {
+  padding: 30px;
+  background-color: #E7963D;
+  /*background-color: #777;*/
+}
+#portfolio ul {
+  text-align: center;
+}
+#portfolio li {
+  width: 28%;
+  margin-right: 5%;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+}
+#portfolio li:last-child {
+  margin-right: 0;
+}
+#portfolio h2 {
+  color: #000000;
+}
+#portfolio a {
+  display: block;
+  width: 100%;
+}
+#portfolio img {
+  width: 100% !important;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  behavior: url('../js/PIE.htc');
+  position: relative;
+  zoom: 1;
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  transition: opacity .5s;
+}
+#portfolio img:hover {
+  opacity: .8;
+  -moz-opacity: .8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+/*----------------contacts----------------*/
+#contacts {
+  padding: 30px 20px;
+  background-color: #000000;
+}
+#contacts .tel {
+  margin-left: 0;
+  padding: 0;
+}
+#contacts .tel a {
+  text-decoration: none;
+}
+#contacts .tel a:hover {
+  text-decoration: underline;
+  color: #e7292c;
+}
+#contacts .social {
+  margin-left: 0;
+  margin-top: 10px;
+}
+/*----------screen < 768px--------------*/
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    background: url('../images/bg_transparent.png') top left repeat;
+  }
+  nav ul {
+    display: block;
+  }
+  nav li {
+    display: block;
+  }
+  nav a,
+  nav a:link {
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .navbar-button {
+    display: block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    behavior: url('../js/PIE.htc');
+    position: relative;
+    zoom: 1;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 10px;
+    width: 2em;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .navbar-button i {
+    font-size: 2em;
+  }
+  .tel,
+  .social {
+    width: 200px;
+    float: right;
+  }
+  /**/
+  #slogan {
+    height: 500px;
+  }
+  /**/
+  #about h1,
+  #knowledges h1 {
+    font-size: 200%;
+  }
+  .about {
+    padding: 3% 0%;
+    margin-left: 40%;
+  }
+  .about h2,
+  #portfolio h2 {
+    font-size: 150%;
+  }
+  .about p,
+  .skills li,
+  .general-knowledges p,
+  .work-place-description p {
+    font-size: 120%;
+    margin-bottom: 5px;
+  }
+  .about span {
+    font-size: 120%;
+    color: #e7292c;
+  }
+  /**/
+  .skills {
+    margin-left: 50px;
+    width: 150px;
+    float: left;
+  }
+  .general-knowledges {
+    margin-left: 220px;
+  }
+  /**/
+  #contacts .tel,
+  #contacts .social {
+    margin-left: 0;
+    padding: 0;
+    float: none;
+    width: 100%;
+  }
+  #contacts .tel p,
+  #contacts .tel span {
+    font-size: 100%;
+  }
+}
+/*----------screen < 480px--------------*/
+@media (max-width: 480px) {
+  #slogan h1,
+  #slogan h2 {
+    font-size: 24px;
+  }
+  /**/
+  #slogan {
+    height: 400px;
+  }
+  /**/
+  #about h1,
+  #knowledges h1 {
+    font-size: 150%;
+  }
+  .photo {
+    width: 90%;
+    float: none;
+    text-align: center;
+  }
+  .photo img {
+    width: 80% !important;
+  }
+  .about {
+    width: 90%;
+    margin-left: 0;
+    padding: 3% 5%;
+  }
+  .about h2,
+  #portfolio h2 {
+    font-size: 120%;
+  }
+  .about p,
+  .skills li,
+  .general-knowledges p,
+  .work-place-description p {
+    font-size: 100%;
+    margin-bottom: 5px;
+  }
+  .about span {
+    font-size: 100%;
+    color: #e7292c;
+  }
+  /**/
+  .skills {
+    width: none;
+    margin-left: 20px;
+    float: none;
+    margin-bottom: 20px;
+  }
+  .general-knowledges {
+    padding: 0 20px;
+    margin-left: 0;
+  }
+  /**/
+  #portfolio li {
+    width: 88%;
+    max-width: 300px;
+    padding: 0 5%;
+  }
+  /**/
+  #contacts .tel p,
+  #contacts .tel span {
+    font-size: 80%;
+  }
+}

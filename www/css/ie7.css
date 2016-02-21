@@ -1,0 +1,13 @@
+.social a {
+	margin-right: 5px;
+	padding: 5px;
+}
+
+nav a {
+	width: 100px;
+	display: block;
+}
+
+nav li {
+	float: left;
+}

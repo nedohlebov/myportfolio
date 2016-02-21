@@ -1,0 +1,10 @@
+.fa-lg{font-size:1.3333333333333333em;margin-top:-4px;padding-top:3px;margin-bottom:-4px;padding-bottom:3px;vertical-align:middle;}
+.nav [class^="fa-"],.nav [class*=" fa-"]{vertical-align:inherit;margin-top:-4px;padding-top:3px;margin-bottom:-4px;padding-bottom:3px;}.nav [class^="fa-"].fa-lg,.nav [class*=" fa-"].fa-lg{vertical-align:-25%;}
+.nav-pills [class^="fa-"].fa-lg,.nav-tabs [class^="fa-"].fa-lg,.nav-pills [class*=" fa-"].fa-lg,.nav-tabs [class*=" fa-"].fa-lg{line-height:.75em;margin-top:-7px;padding-top:5px;margin-bottom:-5px;padding-bottom:4px;}
+.btn [class^="fa-"].pull-left,.btn [class*=" fa-"].pull-left,.btn [class^="fa-"].pull-right,.btn [class*=" fa-"].pull-right{vertical-align:inherit;}
+.btn [class^="fa-"].fa-lg,.btn [class*=" fa-"].fa-lg{margin-top:-0.5em;}
+a [class^="fa-"],a [class*=" fa-"]{cursor:pointer;}
+
+.fa-check{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf00c;');}
+.fa-facebook{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09a;');}
+.fa-vk{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf189;');}
